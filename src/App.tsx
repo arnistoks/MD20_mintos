@@ -58,7 +58,9 @@ const currencies: Currency[] = [
 const App = () => {
   const [selectedCurrencies, setSelectedCurrencies] = useState<Currency[]>(currencies);
 
-  const activeCurrencies = selectedCurrencies.filter((currency) => ({ ...currency, isActive: true } && currency));
+  const activeCurrencies = selectedCurrencies.filter((
+    currency,
+  ) => ({ ...currency, isActive: true } && currency));
 
   return (
     <div className="App">
@@ -74,7 +76,8 @@ const App = () => {
                 <button
                   className="remove__button"
                   onClick={() => (
-                    setSelectedCurrencies(selectedCurrencies.map((curr) => (curr.id === currency.id ? { ...curr, isActive: false } : curr))))}
+                    setSelectedCurrencies(selectedCurrencies.map((curr) => (
+                      curr.id === currency.id ? { ...curr, isActive: false } : curr))))}
                 >
                   X
                 </button>
@@ -87,7 +90,8 @@ const App = () => {
             <button
               key={id}
               className={!isActive ? 'add__button' : 'isActive'}
-              onClick={() => setSelectedCurrencies(selectedCurrencies.map((currency) => (currency.id === id ? { ...currency, isActive: !isActive } : currency)))}
+              onClick={() => setSelectedCurrencies(selectedCurrencies.map((currency) => (
+                currency.id === id ? { ...currency, isActive: !isActive } : currency)))}
             >
               <div className="checkbox">{!isActive ? '' : 'X'}</div>
               {name}
