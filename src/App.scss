@@ -63,7 +63,7 @@
 
 .note {
   background-color: #e8e8e8;
-  width: 93px;
+  width: 92px;
   position: relative;
   text-align: center;
   font-size: 16px;
@@ -72,7 +72,6 @@
 }
 
 .remove__button {
-  position: absolute;
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -109,14 +108,14 @@
 
 .border {
   position: absolute;
-  top: -7px;
-  right: -7px;
+  top: -8px;
+  right: -8px;
   width: 20px;
   height: 20px;
+  padding: 1px;
 
   &:active {
     border-radius: 2px;
-    border: 0.1px solid white;
     box-shadow: 0 0 2px 2px #415ada;
   }
 }
